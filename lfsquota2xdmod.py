@@ -41,9 +41,9 @@ def storage(username, filesystem="/lustre"):
         "dt": iso_dt,
         "soft_threshold": int(quota),
         "hard_threshold": int(limit),
-        "file_count": int(files),
-        "logical_usage": int(kbytes) * 1024,
-        "physical_usage": int(kbytes) * 1024,
+        "file_count": int(files.strip('*')),
+        "logical_usage": int(kbytes.strip('*')) * 1024,
+        "physical_usage": int(kbytes.strip('*')) * 1024,
     }
     return usage
 
