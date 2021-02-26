@@ -65,6 +65,6 @@ def all_users():
 
 if __name__ == "__main__":
     metrics = []
-    for user in all_users()[1:9]:
+    for user in all_users():
         metrics.append(storage(user))
     print(json.dumps(metrics, indent=2))
